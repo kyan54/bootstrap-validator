@@ -23,11 +23,17 @@ See the project docs at http://1000hz.github.io/bootstrap-validator
 ## 支持select2插件的验证
 
 添加一下css到select2.css文件的底部
+
 .has-error .select2-selection {
+
   border-color: #a94442;
+  
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  
 }
+
 
 js引用
 bootstrap-validator/dist/validator.js
