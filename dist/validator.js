@@ -233,6 +233,7 @@
     var $group = $el.closest('.form-group')
     var $block = $group.find('.help-block.with-errors')
     var $feedback = $group.find('.form-control-feedback')
+    var $select2 = $group.find('.select2-selection')
 
     if (!errors.length) return
 
@@ -243,6 +244,7 @@
     $block.data('bs.validator.originalContent') === undefined && $block.data('bs.validator.originalContent', $block.html())
     $block.empty().append(errors)
     $group.addClass('has-error has-danger')
+    $select2.addClass('has-error has-danger')
 
     $group.hasClass('has-feedback')
       && $feedback.removeClass(this.options.feedback.success)
@@ -254,9 +256,11 @@
     var $group = $el.closest('.form-group')
     var $block = $group.find('.help-block.with-errors')
     var $feedback = $group.find('.form-control-feedback')
+    var $select2 = $group.find('.select2-selection')
 
     $block.html($block.data('bs.validator.originalContent'))
     $group.removeClass('has-error has-danger has-success')
+    $select2.removeClass('has-error has-danger')
 
     $group.hasClass('has-feedback')
       && $feedback.removeClass(this.options.feedback.error)
